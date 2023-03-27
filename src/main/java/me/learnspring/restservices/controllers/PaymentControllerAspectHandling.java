@@ -28,8 +28,8 @@ public class PaymentControllerAspectHandling {
                 .body(paymentDetails);
     }
 
-    @GetMapping("/payment")
-    public ResponseEntity<PaymentDetails> makePayment(@RequestBody PaymentDetails paymentDetails) {
+    @GetMapping("/pay")
+    public ResponseEntity<PaymentDetails> makePaymentWithBody(@RequestBody PaymentDetails paymentDetails) {
         logger.info("You are trying to pay " + paymentDetails.getAmount());
 
         return ResponseEntity
